@@ -34,28 +34,35 @@ def hollow_right_triangle(n):
     elif i == (n - 1):
         j += "*" * n + "\n"
     else:
-       j += "*" + (i - 1) * " " + "*" 
+       j += "*" + (i - 1) * " " + "*" + "\n"
 
-    return j
+    return j.rstrip()
 #print(hollow_right_triangle(4))
 
-#             n:
-#*******      0
-# *****       1
-#  ***        2
-#   *         3
+#                n:    p:
+#*******(7)      0     4
+# *****(5)       1     3
+#  ***(3)        2     2
+#   *(1)         3     1
+
+# pattern = 2p+1
+#spaces =i
+
+
 
 
 def inverted_pyramid(n):
-    j += ""
+    j = ""
     for i in range(n):
-       
+       j += i * " "
+       j += "*" * ((2 * (n - i)) -  1) + "\n"
+    
+    return j.rstrip()
 
-
  
  
  
- print(inverted_pyramid(4))
+#print(inverted_pyramid(4))
 
 
     
