@@ -27,17 +27,19 @@ def area_of_circle(radius):
 
 def hollow_right_triangle(n):
     #return ""
-   j += ""
+   j = ""
    for i in range(n):
     if i == 0:
         j += "*" + "\n"
+    elif i == 1:
+       j += "**" + "\n"
     elif i == (n - 1):
         j += "*" * n + "\n"
     else:
        j += "*" + (i - 1) * " " + "*" + "\n"
 
     return j.rstrip()
-#print(hollow_right_triangle(4))
+#print(hollow_right_triangle(5))
 
 #                n:    p:
 #*******(7)      0     4
@@ -48,21 +50,30 @@ def hollow_right_triangle(n):
 # pattern = 2p+1
 #spaces =i
 
+#output in terminal of this code:
+#*******
+# *****
+#  ***
+#   *
 
 
 
 def inverted_pyramid(n):
     j = ""
     for i in range(n):
-       j += i * " "
-       j += "*" * ((2 * (n - i)) -  1) + "\n"
+        if n <= 2:
+           j += "The pyramid height should be at least 3." + "\n"
+           break       
+        else:
+           j += i * " "
+           j += "*" * ((2 * (n - i)) -  1) + "\n"
     
     return j.rstrip()
 
+
  
  
- 
-#print(inverted_pyramid(4))
+print(inverted_pyramid(2))
 
 
     
